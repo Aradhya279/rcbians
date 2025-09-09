@@ -13,28 +13,31 @@
       }
       body {
         font-family: sans-serif;
+        font-style: italic;
       }
       header {
-        height: 80px;
+        min-height: 80px;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         position: fixed;
         top: 0;
         left: 0;
-        padding: 0 20px;
+        padding: 10px 20px;
         background-color: beige;
         z-index: 10;
       }
       header img {
-        height: 100px;
+        height: 80px;
         width: auto;
       }
       nav {
         display: flex;
-        gap: 25px;
+        gap: 20px;
         flex-wrap: wrap;
+        justify-content: center;
       }
       nav a {
         color: black;
@@ -53,23 +56,27 @@
       .social-icons {
         display: flex;
         gap: 10px;
+        justify-content: center;
       }
       .social-icons img {
         width: 24px;
         height: 24px;
       }
       main {
-        padding-top: 90px;
+        padding-top: 100px;
         background-color: rgb(206, 5, 5);
         color: white;
         min-height: 100vh;
         padding: 20px;
         text-align: justify;
+        word-wrap: break-word;
       }
       main h1,
       main h2,
       main h3 {
         margin: 10px 0;
+        word-break: break-word;
+        text-align: center;
       }
       main a {
         color: black;
@@ -116,21 +123,15 @@
       @media (max-width: 768px) {
         header {
           flex-direction: column;
-          height: auto;
-          padding: 10px;
-        }
-        header img {
-          height: 70px;
+          align-items: center;
+          text-align: center;
         }
         nav {
-          gap: 15px;
-          justify-content: center;
-        }
-        .search-box {
-          margin-top: 5px;
+          gap: 10px;
         }
         footer {
           flex-direction: column;
+          text-align: center;
         }
       }
     </style>
@@ -167,23 +168,20 @@
       <h1><u>VIRAT KOHLI</u></h1>
       <p>
         Virat Kohli was born on November 5, 1988, in Delhi, India. He began playing cricket at a
-        young age and was one of the first players to train at the West Delhi Cricket Academy,
-        established in 1998. Kohli’s early success led to his selection in the Delhi Under-15 team
-        and later the Under-17 team, where he was the highest run-scorer in the Vijay Merchant
-        Trophy. Kohli made his international debut in 2008 and quickly established himself as a
-        consistent opener for India. He has played all three formats – Tests, One-Day Internationals
-        (ODIs), and Twenty20 Internationals (T20Is). Kohli has captained the Indian team and led
-        them to several notable victories, including a Test series win in Australia. He has also
-        been the captain of the Royal Challengers Bangalore in the IPL.
+        young age and was one of the first players to train at the West Delhi Cricket Academy.
+        Kohli’s early success led to his selection in the Delhi Under-15 team and later the Under-17
+        team. Kohli made his international debut in 2008 and quickly established himself as a
+        consistent opener for India. He has played all three formats and has been captain of both
+        India and RCB.
       </p>
       <h3># ICC Cricketer of the Year (2017)</h3>
       <h3># Wisden Cricketer of the Year (2018)</h3>
       <h3># Padma Shri, India’s fourth-highest civilian honor (2018)</h3>
       <h2 style="color: beige;"><u>Virat Personal Life</u></h2>
       <p>
-        Kohli's romantic association with Bollywood actress Anushka Sharma, which commenced in 2013,
-        earned the duo the moniker of "Virushka". On 11 December 2017, the couple exchanged nuptials
-        in Florence, Italy. On 11 January 2021, the couple had their first child, a daughter.
+        Kohli's romantic association with Bollywood actress Anushka Sharma commenced in 2013. On 11
+        December 2017, the couple married in Florence, Italy. On 11 January 2021, they welcomed a
+        daughter.
       </p>
       <h3><u>Purchase Links</u></h3>
       <a href="https://www.amazon.in/Jersey-Virat-2024-9-10Years-Multicolour/dp/B0DB7YRJ16/ref=sr_1_4?sr=8-4">Virat Jersey</a>

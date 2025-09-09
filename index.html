@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cricket</title>
+    <title>Cricket</title>
     <style>
       * {
         margin: 0;
@@ -11,144 +11,223 @@
         box-sizing: border-box;
         scroll-behavior: smooth;
       }
+      body {
+        font-family: sans-serif;
+      }
+      header {
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0 20px;
+        background-color: beige;
+        z-index: 10;
+      }
+      header img {
+        height: 100px;
+        width: auto;
+      }
+      nav {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+      nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .search-box {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .search-box input {
+        padding: 5px;
+        font-size: 14px;
+      }
+      .social-icons {
+        display: flex;
+        gap: 10px;
+      }
+      .social-icons img {
+        width: 24px;
+        height: 24px;
+      }
+      main {
+        padding-top: 90px;
+        background-color: rgb(206, 5, 5);
+        color: white;
+        min-height: 100vh;
+        padding: 20px;
+        text-align: justify;
+      }
+      main h1,
+      main h2,
+      main h3 {
+        margin: 10px 0;
+      }
+      main a {
+        color: black;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 20px;
+      }
+      .gallery img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      footer {
+        background-color: black;
+        color: beige;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+      footer h4 {
+        color: gray;
+        margin-bottom: 10px;
+      }
+      footer ul {
+        list-style: none;
+      }
+      footer ul li {
+        margin-bottom: 5px;
+      }
+      footer ul li a {
+        color: bisque;
+        text-decoration: none;
+      }
+      footer .social-links a {
+        color: beige;
+        text-decoration: none;
+      }
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          height: auto;
+          padding: 10px;
+        }
+        header img {
+          height: 70px;
+        }
+        nav {
+          gap: 15px;
+          justify-content: center;
+        }
+        .search-box {
+          margin-top: 5px;
+        }
+        footer {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
-    <div
-      style="
-        height: 100px;
-        width: 100%;
-        display: flex;
-        position: fixed;
-        background-color: beige;
-      "
-    >
-    
-      <img
-        src="./Untitled_design-removebg-preview.png"
-        style="height: 140px; width: 150px; padding-bottom: 3px"
-      />
-
-      
-      <div style="display: flex;gap: 95px; margin-top: 40px;">
-     <a href="https://www.google.com/" style="color: black;">Google</a>
-     <a href="https://www.instagram.com/virat.kohli/"style="color: black;">Virat insta</a>
-     <a href="https://en.wikipedia.org/wiki/Royal_Challengers_Bangalore"style="color: black;">Scores</a>
-     <a href="https://search.brave.com/search?q=rcb+news.&source=desktop"style="color: black;">News</a>
-     <a href="https://timesofindia.indiatimes.com/topic/rcb-players">Players</a> 
-     <div style="display: flex;gap: 2px;">
-      <label>
-        <input type="search" style="margin-top: 7px;"/>
-      </label>
-      <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 8px;"20" height="20" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
-        <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/>
-        <path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/>
-      </svg>
+    <header>
+      <img src="./Untitled_design-removebg-preview.png" />
+      <nav>
+        <a href="https://www.google.com/">Google</a>
+        <a href="https://www.instagram.com/virat.kohli/">Virat Insta</a>
+        <a href="https://en.wikipedia.org/wiki/Royal_Challengers_Bangalore">Scores</a>
+        <a href="https://search.brave.com/search?q=rcb+news.&source=desktop">News</a>
+        <a href="https://timesofindia.indiatimes.com/topic/rcb-players">Players</a>
+      </nav>
+      <div class="search-box">
+        <input type="search" placeholder="Search..." />
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+          viewBox="0 0 16 16">
+          <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/>
+          <path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 
+          1 0 0 1-.1-.115A6.5 6.5 0 1 1 13 6.5M6.5 
+          12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/>
+        </svg>
       </div>
-      <div style="display: flex;gap: 5px;justify-content: end;margin-right: -200px;">
-      <img width="24" height="24" style="color: black;" src="https://documents.iplt20.com//ipl/assets/images/new-twitter-icon.svg" alt="twitter">
-      <img width="24" height="24" src="https://documents.iplt20.com//ipl/assets/images/new-instagram-icon.svg" alt="instagram">
-      <img width="24" height="24" src="https://documents.iplt20.com//ipl/assets/images/new-facebook-icon.svg" alt="facebook">
-     </div> 
-     </div>
-
-    </div>
-    <div
-      style="
-        padding-top: 100px;
-        background-color: rgb(206, 5, 5);
-        color: white;
-        font-family: sans-serif;
-        height: 250vh;
-        padding-left: 5px;
-        padding-right:5px;
-        text-align: justify
-
-      "
-    >
-   <h3 style="margin-top: 3px">This website is specially for die heart fans of virat and RCB fans.........</h3>
-    <h2 style="margin-top: 5px;"><u>Royal Challengers Bengaluru</u></h2>
-      <h1  style="margin-top: 9px;"> <u>VIRAT KOHLI</u></h1>
-      <p style="margin-top: 5px;"> 
-        Virat Kohli was born on November 5, 1988, in Delhi, India. He began
-        playing cricket at a young age and was one of the first players to train
-        at the West Delhi Cricket Academy, established in 1998. Kohli’s early
-        success led to his selection in the Delhi Under-15 team and later the
-        Under-17 team, where he was the highest run-scorer in the Vijay Merchant
-        Trophy.Kohli made his international debut in 2008 and quickly
-        established himself as a consistent opener for India. He has played all
-        three formats – Tests, One-Day Internationals (ODIs), and Twenty20
-        Internationals (T20Is) – and has been an integral part of the Indian
-        team.Kohli has captained the Indian team in all three formats and has
-        led them to several notable victories, including a Test series win in
-        Australia. He has also been the captain of the Royal Challengers
-        Bangalore in the IPL.
-        <h3 style="margin-top: 5px;"># ICC Cricketer of the Year (2017)</h3>
-        <h3 style="margin-top: 5px;"> # Wisden Cricketer of the Year (2018)</h3>
-        <h3 style="margin-top: 5px;"># Padma Shri, India’s fourth-highest civilian honor (2018)</h3>
-        
+      <div class="social-icons">
+        <img src="https://documents.iplt20.com//ipl/assets/images/new-twitter-icon.svg" alt="twitter">
+        <img src="https://documents.iplt20.com//ipl/assets/images/new-instagram-icon.svg" alt="instagram">
+        <img src="https://documents.iplt20.com//ipl/assets/images/new-facebook-icon.svg" alt="facebook">
+      </div>
+    </header>
+    <main>
+      <h3>This website is specially for die heart fans of Virat and RCB fans.........</h3>
+      <h2><u>Royal Challengers Bengaluru</u></h2>
+      <h1><u>VIRAT KOHLI</u></h1>
+      <p>
+        Virat Kohli was born on November 5, 1988, in Delhi, India. He began playing cricket at a
+        young age and was one of the first players to train at the West Delhi Cricket Academy,
+        established in 1998. Kohli’s early success led to his selection in the Delhi Under-15 team
+        and later the Under-17 team, where he was the highest run-scorer in the Vijay Merchant
+        Trophy. Kohli made his international debut in 2008 and quickly established himself as a
+        consistent opener for India. He has played all three formats – Tests, One-Day Internationals
+        (ODIs), and Twenty20 Internationals (T20Is). Kohli has captained the Indian team and led
+        them to several notable victories, including a Test series win in Australia. He has also
+        been the captain of the Royal Challengers Bangalore in the IPL.
       </p>
-      <h2 style="margin-top: 5px; color
-      :beige;"> <u>Virat pesonal life</u> </h2>
-      <p style="margin-top: 5px"> Kohli's romantic association with Bollywood actress Anushka Sharma, which commenced in 2013, earned the duo the moniker of "Virushka".[90] During an interview with Graham Bensinger, Kohli divulged that he had encountered Sharma for the first time, when they were both were engaged in a promotional shoot for Clear shampoo.[91] Their union since then has attracted significant media interest.[92] On 11 December 2017, the couple exchanged nuptials in a ceremony held in Florence, Italy.[93] On 11 January 2021, the couple had their first child, a daughter.</p>
-      <h3><u>purchase links</u></h3>
-     <a
-        href="https://www.amazon.in/Jersey-Virat-2024-9-10Years-Multicolour/dp/B0DB7YRJ16/ref=sr_1_4?sr=8-4"
-        style="margin-top: 10px;color: black;">virat jersey</a
->
-      <h1 style="margin-top:7px"><U>RCBIANS</U></h1>
-      
-         </div>
-
-      </div>
-      <div style="height: 450px;width: 100%;">
-      <img src="./b36f3aeea3574da2bf739ab78e71ece9.webp" usemap="#image-map"style="height: 575px;width: 345px;margin-top:12px;" />
-<!-- Image Map Generated by http://www.image-map.net/ -->
-
-<map name="image-map">
-    <area target="_blank" alt="king kohli" title="king kohli" href="https://www.instagram.com/virat.kohli/" coords="269,615,518,1560" shape="rect">
-    <area target="_blank" alt="bat" title="bat" href="https://www.amazon.com/s?k=Cricket+kohli+bat&amp;rh=n%3A3403051" coords="128,322,183,747" shape="rect">
-</map>
-      <img src="https://crictoday.com/wp-content/uploads/2024/03/RCB.jpg" style="height: 450px;"/>
+      <h3># ICC Cricketer of the Year (2017)</h3>
+      <h3># Wisden Cricketer of the Year (2018)</h3>
+      <h3># Padma Shri, India’s fourth-highest civilian honor (2018)</h3>
+      <h2 style="color: beige;"><u>Virat Personal Life</u></h2>
+      <p>
+        Kohli's romantic association with Bollywood actress Anushka Sharma, which commenced in 2013,
+        earned the duo the moniker of "Virushka". On 11 December 2017, the couple exchanged nuptials
+        in Florence, Italy. On 11 January 2021, the couple had their first child, a daughter.
+      </p>
+      <h3><u>Purchase Links</u></h3>
+      <a href="https://www.amazon.in/Jersey-Virat-2024-9-10Years-Multicolour/dp/B0DB7YRJ16/ref=sr_1_4?sr=8-4">Virat Jersey</a>
+      <h1><u>RCBIANS</u></h1>
+    </main>
+    <div class="gallery">
+      <img src="./b36f3aeea3574da2bf739ab78e71ece9.webp" usemap="#image-map" />
+      <map name="image-map">
+        <area target="_blank" alt="king kohli" title="king kohli" href="https://www.instagram.com/virat.kohli/" coords="269,615,518,1560" shape="rect">
+        <area target="_blank" alt="bat" title="bat" href="https://www.amazon.com/s?k=Cricket+kohli+bat&amp;rh=n%3A3403051" coords="128,322,183,747" shape="rect">
+      </map>
+      <img src="https://crictoday.com/wp-content/uploads/2024/03/RCB.jpg" />
       <img src="https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2023-04/wqdqwd.jpg?h=df3c6bf4&itok=xQMmBOFh"/>
       <img src="https://imgs.search.brave.com/LcY1bDk2Vq5ZaGU8Wgwweb7_1c7pHS2CxX5PkizEuMM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvNTI1/Mjc3MS5qcGc"/>
-</div>   
     </div>
-    
-    
-      
-    </div>
-    <div style="background-color: black;color: beige;">
-      <div class="footer-container;">
-        <div class="footer-section">
-          <h4 style="color: gray;"><u>About Us</u></h4>
-          <p>Proudly say <mark style="color: black;"># we are rcbians.</mark></p>
+    <footer>
+      <div>
+        <h4><u>About Us</u></h4>
+        <p>Proudly say <mark style="color: black;"># we are rcbians.</mark></p>
+      </div>
+      <div>
+        <h4><u>Quick Links</u></h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><u>Contact Us</u></h4>
+        <p>Email: rcbian123@gmail.com</p>
+        <p>Phone:+91 7025802580</p>
+      </div>
+      <div>
+        <h4><u>Follow Us</u></h4>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank">Facebook</a><br/>
+          <a href="https://twitter.com" target="_blank">Twitter</a><br/>
+          <a href="https://instagram.com" target="_blank">Instagram</a><br/>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a><br/>
+          <h3 style="color: gray;">Thanks for visiting my website.</h3>
         </div>
-        <div class="footer-section">
-          <h4 style="color: gray;"><u>Quick Links</u></h4>
-          <ul>
-            <li><a href="#home"style="color: bisque;>Home</a></li>
-            <li><a href="#services style="color: bisque;">Services</a></li>
-            <li><a href="#contact" style="color: beige;">Contact</a></li>
-            <li><a href="#privacy" style="color: beige;">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4 style="color: gray;"><u>Contact Us</u></h4>
-          <p>Email: rcbian123@gmail.com</p>
-          <p>Phone:+91 7025802580</p>
-        </div>
-        
-        <div class="footer-section">
-          <h4 style="color: gray;"><u>Follow Us</u></h4>
-          <div class="social-links">
-            <a href="https://facebook.com" target="_blank"style="color: beige;">Facebook</a><br/>
-            <a href="https://twitter.com" target="_blank"style="color: beige;">Twitter</a><br/>
-            <a href="https://instagram.com" target="_blank"style="color: beige;">Instagram</a><br/>
-            <a href="https://linkedin.com" target="_blank"style="color: beige;">LinkedIn</a><br/>
-            <h3 style="color: gray;">Thanks for visiting in my website.............</h3>
-          </div>
-       
-    
+      </div>
+    </footer>
   </body>
 </html>
